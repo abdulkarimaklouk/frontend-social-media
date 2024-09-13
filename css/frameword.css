@@ -1,0 +1,45 @@
+:root{
+    --backgroundLinear: linear-gradient(54deg, rgba(53,69,240,1) 0%, rgba(111,130,237,1) 50%, rgba(0,228,255,1) 80%);
+}
+.background-gardient{
+    background: var(--backgroundLinear) !important;
+}
+
+.color-text-gradient{
+    background: var(--backgroundLinear);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.Centering-position-topLeft{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.Centering-position-top{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.Centering-position-left{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50% );
+}
+
+.Centering-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Centering-flex-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+

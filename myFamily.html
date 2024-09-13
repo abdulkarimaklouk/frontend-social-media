@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" id="myFamily">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myFamily</title>
+    <!-- Title Icon -->
+    <link rel="shortcut icon" href="img/" type="image/x-icon">
+    <!-- Normally File -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- my framework -->
+    <link rel="stylesheet" href="css/frameword.css">
+</head>
+
+<body>
+    <div class="over-low">
+        <section class="create-post">
+            <div class="Centering-flex">
+                <p>Create Post</p>
+                <i id="x" class="fa-solid fa-x"></i>
+            </div>
+            <section class="content-post">
+                <header class="user">
+                    <img src="img/Paul_Circle 1.png" alt="">
+                    <span id="theUserName">Lorem, ipsum.</span>
+                </header>
+                <article>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="what's on your mind?"></textarea>
+                </article>
+                <form>
+                    <button>create post</button>
+                </form>
+            </section>
+        </section>
+
+        <section class="show-onepost">
+            <div class="Centering-flex">
+                <p>Post</p>
+                <i id="x" class="fa-solid fa-x"></i>
+            </div>
+            <section class="content-post">
+                <header class="user">
+                    <img src="" alt="">
+                    <span></span>
+                </header>
+                <article>
+                </article>
+                <footer>
+                    <div>
+                        <span id="count-likeShowpost">0</span>
+                        <i id="like-showpost" class="fa-regular fa-heart like-regular"></i>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </footer>
+            </section>
+            <section class="comments-post">
+            </section>
+            <form>
+                <img src="" alt="">
+                <div>
+                    <textarea></textarea>
+                    <button>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="update-post">
+            <div class="Centering-flex">
+                <p>Update Post</p>
+                <i id="x" class="fa-solid fa-x"></i>
+            </div>
+            <section class="content-post">
+                <header class="user">
+                    <img src="img/Paul_Circle 1.png" alt="">
+                    <span id="theUserName">Lorem, ipsum.</span>
+                </header>
+                <article>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="what's on your mind?"></textarea>
+                </article>
+                <form>
+                    <button>update post</button>
+                </form>
+            </section>
+        </section>
+
+        <form id="confirm">
+            <p>are you sure delete post?</p>
+            <div>
+                <span id="x" class="Centering-flex">No</span>
+                <button>Yes</button>
+            </div>
+        </form>
+        <div id="circale-animation">
+            <span></span>
+        </div>
+    </div>
+
+
+
+
+    <header class="container Centering-flex-between">
+        <div class="heading Centering-flex-between">
+            <a href="" class="color-text-gradient">MyFamily</a>
+            <div class="input-search">
+                <i class="fa-solid fa-magnifying-glass Centering-position-top"></i>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <nav class="Centering-flex-between">
+            <ul style=" justify-content: space-between;align-items: center; width: 100%; ">
+                <div style="display: flex;">
+                    <li><a><i class="fa-solid fa-house color-text-gradient"></i></a></li>
+                    <li><a><i class="fa-regular fa-user color-text-gradient"></i></a></li>
+                    <li><a><i class="fa-regular fa-bell color-text-gradient"></i></a></li>
+                    <li><a><i class="fa-regular fa-square-plus color-text-gradient"></i></a></li>
+                    <li><a><i class="fa-regular fa-message color-text-gradient"></i></a></li>
+                    <li><a><i class="fa-solid fa-gear color-text-gradient"></i></a></li>
+                </div>
+                <li><a><i id="log-out" class="fa-solid fa-right-to-bracket color-text-gradient"></i></a></li>
+            </ul>
+            <div class="bar-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <nav>
+            <section class="info-section">
+                <div class="user-photo">
+                    <a href="" class="Centering-position-left"><img src="img/profile.png"></img></a>
+                </div>
+                <div class="info-text">
+                    <a href="">
+                        <h3>Lorem, ipsum.</h3>
+                    </a>
+                    <div class="following">
+                        <a href="">
+                            <p>Following</p>
+                            <small>283</small>
+                        </a>
+                    </div>
+                    <div class="followers">
+                        <a href="">
+                            <p>Followers</p>
+                            <small>1710</small>
+                        </a>
+                    </div>
+                </div>
+                <div class="view-profile">
+                    <a href="" class="">View Profile </a>
+                </div>
+            </section>
+            <section class="feeds">
+                <h3>New Feeds</h3>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-newspaper"></i>
+                            <span>News Feed</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-fire"></i>
+                            <span>Popular Groups</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Games</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-bomb"></i>
+                            <span>Explore Stories</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+
+
+        <section>
+            <div class="rectangle Centering-flex-between">
+                <div class="content-mind">
+                    <img src="img/profile.png" alt="">
+                    <span>what's on your mind?</span>
+                </div>
+                <i class="fa-regular fa-images"></i>
+            </div>
+            <section class="storys">
+                <div class="add-story">
+                    <img src="img/profile.png" alt="">
+                    <p class="Centering-flex">Add story</p>
+                </div>
+                <div class="story">
+                    <img src="img/story1.png" alt="">
+                    <span>
+                        <img src="img/circale-storyPhoto.png" alt="">
+                    </span>
+                    <span class="name-user">Lorem, ipsum.</span>
+                </div>
+                <div class="story">
+                    <img src="img/story1.png" alt="">
+                    <span>
+                        <img src="img/circale-storyPhoto.png" alt="">
+                    </span>
+                    <span class="name-user">Lorem, ipsum.</span>
+                </div>
+                <div class="story">
+                    <img src="img/story1.png" alt="">
+                    <span>
+                        <img src="img/circale-storyPhoto.png" alt="">
+                    </span>
+                    <span class="name-user">Lorem, ipsum.</span>
+                </div>
+                <div class="story">
+                    <img src="img/story1.png" alt="">
+                    <span>
+                        <img src="img/circale-storyPhoto.png" alt="">
+                    </span>
+                    <span class="name-user">Lorem, ipsum.</span>
+                </div>
+                <div class="story">
+                    <img src="img/story1.png" alt="">
+                    <span>
+                        <img src="img/circale-storyPhoto.png" alt="">
+                    </span>
+                    <span class="name-user">Lorem, ipsum.</span>
+                </div>
+                <div class="story">
+                    <img src="img/story1.png" alt="">
+                    <span>
+                        <img src="img/circale-storyPhoto.png" alt="">
+                    </span>
+                    <span class="name-user">Lorem, ipsum.</span>
+                </div>
+            </section>
+            <section class="posts">
+            </section>
+        </section>
+
+
+
+        <aside>
+            <div class="text-request Centering-flex-between">
+                <span>Follow Requests</span>
+                <a href="">see all</a>
+            </div>
+            <ul>
+                <li>
+                    <img src="img/images 1.png" alt="">
+                    <div class="info-request">
+                        <div class="text">
+                            <p>Emily Waston </p>
+                            <span>11 mutual friend </span>
+                        </div>
+                        <div class="btns">
+                            <button class="">Confirm</button>
+                            <button class="">Delete</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/images 2.png" alt="">
+                    <div class="info-request">
+                        <div class="text">
+                            <p>Emily Waston </p>
+                            <span>11 mutual friend </span>
+                        </div>
+                        <div class="btns">
+                            <button class="">Confirm</button>
+                            <button class="">Delete</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/images 3.png" alt="">
+                    <div class="info-request">
+                        <div class="text">
+                            <p>Emily Waston </p>
+                            <span>11 mutual friend </span>
+                        </div>
+                        <div class="btns">
+                            <button class="">Confirm</button>
+                            <button class="">Delete</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/images 4.png" alt="">
+                    <div class="info-request">
+                        <div class="text">
+                            <p>Emily Waston </p>
+                            <span>11 mutual friend </span>
+                        </div>
+                        <div class="btns">
+                            <button class="">Confirm</button>
+                            <button class="">Delete</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <script src="./js/functions.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>

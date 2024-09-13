@@ -1,0 +1,959 @@
+/* Start Variables */
+:root{
+    --dark-color : #0f2027;
+    --p-color : #F5F4F4;
+    --white-color : #fff;
+    --border-raduisLogin : 5px;
+    --border-raduisHeader : 20px;
+    --padding-margin-inputs : 10px;
+    --error-color : #ff3860;
+    --valid-color : #09c372;
+    --font-size-p : 13px;
+    --size-headingText : 50px;
+    --padding-myfamily-header:  25px;
+    --left-container : 32px;
+    --color-dark-blue: #0f2027 ;
+    --blue-color : #1227DF;
+    --border-bottom-color: rgba(0, 0, 0, 0.20) ;
+}
+/* End Variables */
+/* Start Global Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* End Global Rules */
+/* login page */
+#login body{
+    height: 100vh;
+}
+#login body > h1 {
+    margin: 50px 0 0;
+    font-size: var(--size-headingText);
+    color: var(--p-color);
+}
+#login .container form {
+    width: 320px;
+    padding: 25px;
+    border-radius: var(--border-raduisLogin);
+    background-color: var(--p-color);
+}
+#login .container form > h2{
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 30px;
+}
+#login .container form .input-div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--padding-margin-inputs) ;
+    position: relative;
+}
+
+#login .container form .username-div {
+    display: none;
+}
+
+#login .container form .input-div input{
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: var(--border-raduisLogin);
+    padding: var(--padding-margin-inputs);
+    font-size: var(--font-size-p);
+    background-color: var(--p-color);
+}
+
+#login .container form input:focus{
+    outline: none;
+}
+
+#login .container form .eye-hideDiv {
+    position: relative;
+}
+#login .container form .eye-hideDiv .eye{ 
+    right: 10px !important;
+    font-size: calc(  var(--font-size-p));
+    opacity: 0.8;
+}
+
+
+#login .container form button {
+    width: 100%;
+    padding: var(--padding-margin-inputs);
+    margin-bottom: calc(var(--padding-margin-inputs) + 10px);
+    border: none;
+    border-radius: var(--border-raduisLogin);
+    color: var(--p-color);
+}
+
+
+#login .container form > p{
+    font-size: var(--font-size-p);
+}
+
+
+#login .container form .input-success input {
+    border-color: var(--valid-color);
+}
+#login .container form .input-error input {
+    border-color: var(--error-color);
+}
+
+#login .container form .input-div .error{
+    color: var(--error-color);
+    font-size: var(--font-size-p);
+    margin-top: calc(var(--padding-margin-inputs) - 5px);
+}
+
+
+
+
+@media (max-width: 600px) {
+    #login body > h1{
+        font-size: 30px;
+    }
+    #login body .container form > h2{
+        font-size: 25px;
+    }
+}
+@media (max-width : 376px) {
+    #login .container form{
+        width: 100%;
+        border-radius: 0;
+    }
+    #login .container {
+        width: 100%;
+    }
+} 
+
+
+/*myfamily page*/
+
+
+
+#myFamily body{ 
+    background-color: var(--p-color);
+}
+
+#myFamily .over-low{
+    display: none;
+}
+
+#myFamily .overlow-body{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--border-bottom-color);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#myFamily .overlow-body > section{
+    background-color: #fff;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0px 30px 0 #000;
+}
+#myFamily .overlow-body > .show-onepost {
+    width: 600px;
+    padding: 15px 15px 0;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+#myFamily .overlow-body > section > div:first-child{
+    position: relative;
+    padding: 5px 0 15px;
+}
+
+#myFamily .overlow-body > section > div:first-child::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: 1px;
+    background-color: var(--border-bottom-color);
+}
+
+#myFamily .overlow-body > section > div:first-child p{
+    font-size: 18px;
+    font-weight: 500;
+}
+#myFamily .overlow-body > section > div:first-child i{
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    background-color: var(--p-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+
+#myFamily .overlow-body > section > section.content-post{
+    margin-top: 7px;
+}
+#myFamily .overlow-body > section > section.content-post .user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#myFamily .overlow-body > section > section.content-post .user img{
+    width: 40px;
+    margin-right: 10px;
+}
+#myFamily .overlow-body > section > section.content-post .user span{
+    font-size: 15px;
+    font-weight: 500;
+}
+#myFamily .overlow-body > section > section.content-post article{
+    padding-bottom: 15px;
+}
+
+#myFamily .overlow-body textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+}
+#myFamily .overlow-body > section > section.content-post article textarea::placeholder{
+    font-size: 20px;
+}
+
+#myFamily .overlow-body > section > section.content-post > form button {
+    font-size: 13px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #ccc;
+}
+
+#myFamily .overlow-body > .show-onepost > section.content-post  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid var(--border-bottom-color);
+    user-select: none;
+    cursor: pointer;
+}
+
+#myFamily .overlow-body > .show-onepost > section.content-post footer div:first-child i{
+    color: var(--blue-color);
+} 
+
+#myFamily .overlow-body >  .show-onepost > section.comments-post {
+    margin-top: 30px;
+}
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment{
+    display: flex;
+    align-items: start;
+    margin-bottom: 15px;
+}
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment > img{
+    width: 40px;
+    margin-right: 5px;
+}
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment .content-comment {
+    background-color: var(--p-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment .content-comment {
+    display: flex;
+}
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment .content-comment > i{
+    display: none;
+}
+
+
+
+
+
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment .content-comment > i{
+    font-size: 15px;
+    margin: 2px 0 0 10px;
+    cursor: pointer;
+}
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment .content-comment div h5{
+    margin-bottom: 5px;
+}
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment .content-comment div h5,
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment .content-comment div span{
+    line-height: 15px;
+    display: block;
+}
+
+#myFamily .overlow-body >  .show-onepost > section.comments-post .comment .content-comment span{
+    font-size: var(--font-size-p);
+}
+
+
+#myFamily .overlow-body >  .show-onepost > form{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: start;
+    background-color: var(--white-color);
+    padding: 20px 10px;
+}
+
+#myFamily .overlow-body >  .show-onepost > form::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: 1px;
+    background-color: var(--border-bottom-color);
+    box-shadow: 0 0 1px #000;
+}
+
+#myFamily .overlow-body >  .show-onepost > form img{
+    width: 40px;
+    margin-right: 5px;
+}
+
+#myFamily .overlow-body >  .show-onepost > form div:first-of-type{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--p-color);
+}
+#myFamily .overlow-body >  .show-onepost > form div:first-of-type textarea{
+    background-color: var(--p-color);
+    margin-right: 5px;
+}
+#myFamily .overlow-body >  .show-onepost > form div:first-of-type button{
+    border: none;
+}
+
+#myFamily .overlow-body > #confirm {
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    user-select: none;
+}
+#myFamily .overlow-body > #confirm p{
+    margin-bottom: 17px;
+    font-size: 17px;
+}
+#myFamily .overlow-body > #confirm > div{
+    display: flex;
+    justify-content: space-between;
+}
+#myFamily .overlow-body > #confirm button , #myFamily .overlow-body > #confirm #x  {
+    color: var(--white-color);
+    background-color:var(--blue-color);
+    border: 1px solid var(--blue-color);
+    border-radius: 5px;
+    outline: none;
+    padding:7px;
+    flex-basis: 49%;
+    cursor: pointer;
+}
+#myFamily .overlow-body > #confirm #x{
+    border: 1px solid red;
+    background-color:red;   
+}
+
+
+#myFamily .over-low > #circale-animation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 111;
+    display: none;
+} 
+#myFamily .over-low > #circale-animation span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #1227DF;
+    border-left: 5px solid #fff;
+    animation: circale 0.5s linear infinite ; 
+}
+
+@keyframes circale {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+#myFamily .container {
+    position: relative;
+    left: var(--left-container);
+    width: calc(100% - var(--left-container));
+} 
+
+#myFamily body > header{
+    border-radius: var(--border-raduisHeader) 0  0 var(--border-raduisHeader);
+    background-color: var(--white-color);
+    padding: 7px calc(var(--padding-myfamily-header) - 10px);
+}
+#myFamily  body > header .heading , #myFamily header .heading > a {
+    margin-right: var(--padding-myfamily-header)
+}
+#myFamily  body > header .heading > a {
+    font-size: calc(var(--size-headingText) - 20px);
+    font-weight: 700;
+    line-height: 70.38px;
+}
+
+#myFamily body > header .heading .input-search{
+    position: relative;
+}
+
+#myFamily body > header .heading .input-search input{
+    background-color: var(--p-color);
+    border: 1px solid var(--p-color);
+    border-radius: var(--border-raduisLogin);
+    outline: none;
+    padding :7px var(--padding-margin-inputs);
+    width: 500px;
+}
+#myFamily body > header .heading .input-search i {
+    right: var(--padding-margin-inputs);
+}
+#myFamily  body > header nav {
+    flex-grow: 1;
+}
+#myFamily body > header nav ul {
+    display: flex;
+}
+#myFamily body > header nav ul li{
+    padding: 0 7px ;
+}
+#myFamily body > header nav ul li a i {
+    font-size: var(--padding-myfamily-header);
+}
+#myFamily header nav .bar-icon{
+    display: none;
+}
+
+#myFamily main{
+    display: flex;
+    gap: var(--padding-myfamily-header);
+    margin-top: var(--padding-myfamily-header)  ;
+}
+
+#myFamily main nav , #myFamily main aside{
+    height: fit-content;
+    position: sticky; 
+    top: 10px;
+}
+
+#myFamily main nav .info-section ,
+#myFamily main nav .feeds {
+    background-color: var(--white-color);
+    border-radius:0 var(--border-raduisHeader) var(--border-raduisHeader) 0;
+    margin-bottom: var(--padding-myfamily-header);
+}
+#myFamily main nav {
+    min-width: 200px;
+}
+#myFamily main nav .info-section {
+    text-align: center;
+}
+
+#myFamily main nav .info-section .user-photo {
+    position: relative;
+    height: 80px;
+}
+
+#myFamily main nav .info-section .user-photo::before{
+    content: "";
+    position: absolute;
+    background : linear-gradient(54deg, rgba(53,69,240,1) 0%, rgba(111,130,237,1) 50%, rgba(0,228,255,1) 80%);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 0 var(--border-raduisHeader) 0 0 ;
+}
+
+#myFamily main nav .info-section .user-photo a{
+    bottom: 0;
+}
+
+
+#myFamily main nav .info-section .user-photo a img{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    transform: translateY( 50%);
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#myFamily main nav .info-section .user-photo {
+    margin-bottom: 40px;
+}
+#myFamily main nav .info-section .info-text h3, 
+#myFamily main nav .info-section .info-text .following, 
+#myFamily main nav .info-section .info-text .followers{
+    margin-bottom: 10px;
+}
+
+#myFamily main nav .info-section .info-text a h3 ,
+#myFamily main nav .info-section .info-text a p{
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--color-dark-blue) ;
+}
+#myFamily main nav .info-section .info-text a small{
+    color:var(--color-dark-blue) ;
+}
+#myFamily main nav .info-section .info-text a p{
+    font-size: var(--font-size-p);
+    line-height: 23px;
+}
+
+
+
+#myFamily main nav .info-section .view-profile {
+    padding: 15px;
+    border-top: 1px solid var(--border-bottom-color);
+}
+#myFamily main nav .info-section .view-profile a{
+    font-size: var(--font-size-p);
+    font-weight: 300;
+    line-height: 23px;
+    color: var(--blue-color);
+}
+
+
+#myFamily main nav .feeds{
+    padding: 10px;
+}
+
+#myFamily main nav .feeds h3{
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+
+#myFamily main nav .feeds ul li {
+    margin-bottom: 15px;
+}    
+
+#myFamily main nav .feeds ul li i{
+    position: absolute;
+    color: var(--dark-color);
+}
+
+#myFamily main nav .feeds ul li span{
+    color: var(--dark-color);
+    font-size: var(--font-size-p);
+    margin-left: 30px;
+}    
+
+
+
+
+
+
+#myFamily main aside {
+    background-color: var(--white-color);
+    margin-right: 10px;
+    padding: 0 5px 5px ;
+    border-radius: var(--border-raduisHeader) 0 0 var(--border-raduisHeader);
+}
+
+#myFamily main aside .text-request{
+    margin: 10px 0 calc(var(--padding-myfamily-header) - 5px);
+    padding: 5px 15px;
+    border-bottom: 1px solid var(--border-bottom-color);
+}
+
+
+#myFamily main aside .text-request span{
+    font-weight: 400;
+    line-height: 35px;
+    font-size: 15px;
+}
+
+
+
+#myFamily main aside .text-request a{
+    color: var(--blue-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+
+#myFamily main aside ul li {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: calc(var(--padding-myfamily-header) - 5px);
+}
+
+
+#myFamily main aside ul li img{
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+} 
+#myFamily main aside ul li .info-request {
+    display: flex;
+    align-items: center;
+}
+
+
+#myFamily main aside ul li .info-request .text{
+    width: 150px;
+}
+#myFamily main aside ul li .info-request p ,
+#myFamily main aside ul li .info-request span{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#myFamily main aside ul li .info-request span{
+    font-size: calc(var(--font-size-p) - 1px);
+    font-weight: 400;
+}
+
+#myFamily main aside ul li .info-request .btns{
+    display: flex;
+    flex-direction: column;
+}
+#myFamily main aside ul li .info-request button{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border-radius: var(--border-raduisHeader);
+    border: 1px solid  var(--blue-color);
+    padding: 2px 10px;
+    margin-top: 5px;
+    font-size: var(--font-size-p);
+}
+
+
+#myFamily main > section {
+    flex-grow: 1;
+}
+#myFamily main > section .rectangle {
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--white-color);
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px 7px;
+}
+#myFamily main > section .rectangle > div.content-mind{
+    display: flex;
+    align-items: center;
+}
+#myFamily main > section .rectangle > div.content-mind img{
+    width: 35px;
+    height: 35px;
+    margin-right: 7px;
+}
+#myFamily main > section .rectangle > div.content-mind span{
+    font-weight: 400;
+    line-height: 35px;
+    opacity: 0.5;
+}
+#myFamily main > section .rectangle > i{
+    color: var(--blue-color);
+    font-size: 21px;
+    margin-right: 7px;
+}
+
+
+
+
+
+#myFamily main > section .storys{
+    margin-top: 15px;
+    padding: 15px 0;
+    position: relative;
+    display: flex ;
+    align-items: center;
+    gap: var(--padding-myfamily-header);
+}
+
+#myFamily main > section .storys::before , #myFamily main > section .storys::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-bottom-color);
+}
+#myFamily main > section .storys::before{
+    top: 0;
+}
+#myFamily main > section .storys::after{
+    bottom: 0;
+}
+
+
+#myFamily main > section .storys .add-story{
+    background-color: var(--white-color);
+    width: fit-content;
+    border-radius: 10px;
+}
+
+#myFamily main > section .storys .add-story > img{
+    max-width: 125px;
+}
+
+#myFamily main > section .storys .add-story p{
+    background-color: #D9D9D980;
+    font-size: var(--font-size-p);
+    font-weight: 400;
+    border-radius: 0 0 10px 10px ;
+    border: 1px solid var(--p-color);
+    padding: 20px 0;
+    position: relative;
+}
+
+#myFamily main > section .storys .add-story p::before{
+    content: "+";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+
+#myFamily main > section .storys .story {
+    position: relative;         
+}
+#myFamily main > section .storys .story > img:first-child {
+    max-width: 125px;
+    height: 170px;
+}
+#myFamily main > section .storys .story > span img{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+}
+#myFamily main > section .storys .story .name-user{
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    font-size: 10px;
+    color: var(--white-color);
+}
+
+#myFamily main > section .posts .post {
+    background-color: var(--white-color);
+    margin: 20px 0;
+    padding:10px 15px;
+    border-radius: 10px;
+} 
+#myFamily main > section .posts .post > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#myFamily main > section .posts .post > header .user {
+    display: flex;
+    align-items: center;
+}
+
+#myFamily main > section .posts .post > header .user img{
+    width: 40px;
+    height: 40px;
+    margin-right: 7px;
+}
+#myFamily main > section .posts .post > header .user span{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 29px;
+}
+#myFamily main > section .posts .post > header .icons{
+    display: flex;
+    align-items: center; 
+    font-size: 15px;
+}
+#myFamily main > section .posts .post > header .icons .points-Options{
+    background-color: var(--p-color);
+    padding:0 5px;
+    margin-right: 10px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: block !important;
+}
+#myFamily main > section .posts .post > header .icons .points-Options::before{
+    content: "";
+    position: absolute;
+    right: -19px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 10px solid ;
+    border-color: transparent transparent transparent var(--blue-color);
+}
+#myFamily main > section .posts .post > header .icons .points-Options li{
+    position: relative;
+    padding: 5px 0;
+}
+#myFamily main > section .posts .post > header .icons .points-Options li:not(:last-child)::before{
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    left: -5px;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--border-bottom-color);
+}
+#myFamily main > section .posts .post > header .icons i.points{
+    padding: 0 5px;
+    display: none;
+}
+#myFamily main > section .posts .post > header .icons i.x{
+    display: none;
+}
+#myFamily main > section .posts .post > article {
+    margin: 10px 0 15px;
+}
+#myFamily main > section .posts .post > footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: solid 1px var(--border-bottom-color);
+    padding: 10px 10px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+#myFamily main > section .posts .post > footer i {
+    position: relative;
+}
+#myFamily main > section .posts .post > footer .like-commentIcons #like-icon{
+    color: var(--blue-color);
+}
+#myFamily main > section .posts .post > footer .like-commentIcons span{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+@media (max-width:1600px){
+    #myFamily main > section {
+        overflow: hidden;
+    }
+}
+
+@media (max-width:1050px){
+    #myFamily body > header .heading > a {
+        font-size: 25px;
+    }
+    #myFamily body > header .heading .input-search input  {
+        width: 350px;
+    }
+    #myFamily body > header nav ul li a i , #myFamily body > header nav .bar-icon i {
+        font-size: 20px;
+    }
+    #myFamily main > nav {
+        min-width: 150px;
+    }  
+    #myFamily main aside ul li .info-request .text{
+        width: 110px;
+    }
+    #myFamily main > section .storys .story > img:first-child , 
+    #myFamily main > section .storys .add-story > img {
+        width: 100px;
+    }
+    #myFamily main > section .storys .story > img:first-child {
+        height: 150px;
+    } 
+    #myFamily main aside ul li .info-request p{
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width:850px) {
+    #myFamily body > header .heading > a {
+        font-size: 22px;
+    }
+    #myFamily main aside{
+        display: none;
+    }
+    #myFamily main > section {
+        margin-right: 20px;
+    }
+    #myFamily body > header .heading .input-search input{
+        width: 200px;
+    }
+}
+
+@media(max-width:650px){
+    #myFamily body > header nav {
+        justify-content: end;
+    }
+    #myFamily body > header nav .bar-icon{
+        display: block;
+    }
+    #myFamily body > header nav ul , 
+    #myFamily main > nav{
+        display: none;
+    }
+}
+
+@media (max-width: 440px){
+    #myFamily body > header .heading > a {
+        font-size: 20px;
+    }
+    #myFamily body > header .heading .input-search input  {
+        width: 150px;
+    }
+}
